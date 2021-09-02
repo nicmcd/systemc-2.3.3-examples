@@ -40,6 +40,11 @@
 
 cmake_minimum_required (VERSION 3.0)
 
+project(systemc-2.3.3-examples)
+find_package(SystemCLanguage REQUIRED)
+set (CMAKE_CXX_STANDARD 17)
+set (CMAKE_CXX_STANDARD_REQUIRED TRUE)
+
 # Only built under "check" target
 #  - see https://cmake.org/Wiki/CMakeEmulateMakeCheck
 add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND} -C "${CMAKE_BUILD_TYPE}")
